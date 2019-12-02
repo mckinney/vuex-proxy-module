@@ -43,6 +43,10 @@ function createProxyModule(proxy, namespaced = true) {
 	return (store) => {
 		const { commit, dispatch } = store;
 
+		if (!store.hasModule) {
+			store.hasModule = hasModuleInstaller(store);
+		}
+
 		function state() {
 			return getProxyState(store.state, store.getters);
 		}
