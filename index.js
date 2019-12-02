@@ -3,6 +3,7 @@
 	{"allow": ["_modulesNamespaceMap", "_children", "_rawModule", "_modules"] }] */
 
 import objectPath from "object-path";
+import { installer as hasModuleInstaller } from "vuex-has-module";
 
 function createProxyModule(proxy, namespaced = true) {
 	const proxyPathArray = proxy.path.split("/");
