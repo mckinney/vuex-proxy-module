@@ -13,12 +13,12 @@ function createProxyModule(proxy, namespaced = true) {
 
 		let realPath = false;
 
-		if (typeof proxy.path === "function") {
+		if (typeof proxy.paths === "function") {
 			realPath = proxy.paths(proxyResult);
-		} else if (typeof proxy.path === "object") {
+		} else if (typeof proxy.paths === "object") {
 			realPath = proxy.paths[proxyResult];
 		} else  {
-			throw new Error("Vuex Proxy module does not recognize the paths option.");
+			throw new Error("vuex-proxy-module does not recognize the paths option.");
 		}
 
 		return realPath;
