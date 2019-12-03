@@ -19,7 +19,7 @@ class VuexProxyModuleController {
 	}
 
 	get realModulePathString() {
-		return this.proxyPath(this.store.state, this.store.getters).replace(/\/?$/, '/');
+		return this.proxyPath(this.store.state, this.store.getters);
 	}
 
 	get realModulePathArray() {
@@ -27,15 +27,15 @@ class VuexProxyModuleController {
 	}
 
 	get realModuleReference() {
-		return this.store._modulesNamespaceMap[this.realModulePathString];
+		return this.store._modulesNamespaceMap[this.realModulePathString.replace(/\/?$/, '/')];
 	}
 
 	get rawRealModule() {
-		return this.store._modulesNamespaceMap[this.realModulePathString]._rawModule;
+		return this.realModuleReference._rawModule;
 	}
 
 	get realModuleState() {
-		return objectPath.get(this.store.state, this.realModulePathString.split("/"));
+		return objectPath.get(this.store.state, this.realModulePathArray);
 	}
 
 	get realModuleGetters() {
