@@ -4,6 +4,9 @@ Vuex plugin for proxying an existing module with a simple path.
 
 ## Getting Started
 
+Import the plugin and add it to the root Vuex Store instance.  Use the proxyPath method to return the path of the real module you would like to proxy.  Returning `false` will deactivate the proxy module.
+
+
 ```
 import Vue from 'vue';
 import Vuex from 'vuex';
@@ -19,10 +22,9 @@ export new Vuex.Store({
 	plugins: [
 		createProxyModule({
 			path: "players/active",
-			proxyCondition: (rootState, rootGetters) => rootGetters["players/activePlayerID"],
-			paths: {
-				user: "game/players/user",
-				computer: "game/players/computer",
+			proxyPath: (rootState, rootGetters) => {
+				const user = rootGetters["game/players/active"];
+				return `game/chapters/${active.id}`;
 			},
 		}),
 	],
