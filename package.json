@@ -1,6 +1,6 @@
 {
   "name": "vuex-proxy-module",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Vuex plugin for dynamically proxying an existing module to a custom path.",
   "author": "",
   "license": "ISC",
@@ -24,7 +24,9 @@
     "eslint-plugin-vue": "^6.0.0"
   },
   "dependencies": {
-    "object-path": "^0.11.4",
-    "vuex-has-module": "git+ssh://git@bitbucket.org/mckdevs/vuex-has-module.git"
+    "object-path": "^0.11.4"
+  },
+  "peerDependencies": {
+	"vuex": "^3.4.0"
   }
 }
