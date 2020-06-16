@@ -1,3 +1,9 @@
+# 1.1.1
+
+### Features
+
+* Fix reference to custom vuex-has-module code
+
 # 1.1.0
 
 ### Features

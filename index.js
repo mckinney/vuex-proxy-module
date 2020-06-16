@@ -1,15 +1,10 @@
 import VuexProxyModuleController from "./proxy-module";
-import { installer as hasModuleInstaller } from "vuex-has-module";
 
 function createProxyModule(proxy, namespaced = true) {
 	return (store) => {
 		const proxyController = new VuexProxyModuleController(store, proxy);
 
 		const { commit, dispatch } = store;
-
-		if (!store.hasModule) {
-			store.hasModule = hasModuleInstaller(store);
-		}
 
 		function registerProxyModule() {
 			unregisterProxyModule();
