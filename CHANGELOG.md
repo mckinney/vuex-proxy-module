@@ -1,3 +1,9 @@
+# 1.1.2
+
+### Features
+
+* Temp fix for incomplete vuex 3.4.0 hasModule functionality
+
 # 1.1.1
 
 ### Features

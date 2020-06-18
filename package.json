@@ -1,6 +1,6 @@
 {
   "name": "vuex-proxy-module",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "description": "Vuex plugin for dynamically proxying an existing module to a custom path.",
   "author": "",
   "license": "ISC",

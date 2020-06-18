@@ -39,7 +39,9 @@ function createProxyModule(proxy, namespaced = true) {
 		};
 
 		store.watch(proxy.proxyPath, (current, previous) => {
-			if (current && !store.hasModule(current)) {
+			const moduleLocation = typeof current === "string" ? current.split("/") : current;
+
+			if (current && !store.hasModule(moduleLocation)) {
 				throw new Error(`vuex-proxy-module expected module at path ${current} to exist`);
 			} else if (!current) {
 				unregisterProxyModule();
