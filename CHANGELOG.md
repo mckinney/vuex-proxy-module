@@ -1,3 +1,9 @@
+# 2.0.0
+
+### Bugfixes
+
+* Bump version number due to breaking change (hasModule inclusion)
+
 # 1.1.2
 
 ### Features
