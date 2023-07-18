@@ -4,14 +4,14 @@
   "description": "Vuex plugin for dynamically proxying an existing module to a custom path.",
   "author": "",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/mckdevs/vuex-proxy-module#readme",
+  "homepage": "https://github.com/mckinney/vuex-proxy-module#readme",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://bitbucket.org/mckdevs/vuex-proxy-module.git"
+    "url": "git+https://github.com/mckinney/vuex-proxy-module"
   },
   "devDependencies": {
     "eslint": "^6.6.0",
@@ -25,6 +25,6 @@
   },
   "dependencies": {
     "object-path": "^0.11.4",
-    "vuex-has-module": "git+ssh://git@bitbucket.org/mckdevs/vuex-has-module.git"
+    "vuex-has-module": "git+https://github.com/mckinney/vuex-has-module.git"
   }
 }
